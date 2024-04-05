@@ -1,0 +1,238 @@
+.checkOut{
+    display: flex;
+    justify-content: center;
+    padding: 0px 30px 0px 30px;
+    
+}
+body{
+    padding-bottom: 20px;
+}
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+    padding: 0px 20px 0px 20px;
+}
+.image img{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+.text h1{
+    color: #f1f1f1;
+    text-align: center;
+}
+#merch{
+    text-align: center;
+    font-size: 50px;
+}
+.text h5{
+    color:#f1f1f1 ;
+    text-align: center;
+}
+
+.text h1 span{
+    margin-top: -20px;
+    font-size: 10px;
+}
+.top{
+    background-color: #1c1c1c;
+}
+#select, #color, #size, #quantity, #Quantity {
+    width: 130px;
+    height: 25px;
+    font-size: 15px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#1c1c1c ;
+    border-radius: 5px;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+}
+.button button{
+    padding: 8px 40px;
+    border-style: none;
+    border-radius: 15px;
+    color: #f1f1f1;
+    border-width: 1px;
+    font-size: 20px;
+    background-color: #1c1c1c;
+   
+}
+
+.button button:hover{
+    padding: 8px 40px;
+    border-color: black;
+
+    border-style: solid;
+    color: #1c1c1c;
+    border-radius: 15px;
+    color: #1c1c1c;
+    font-size: 20px;
+    border-width: 1px;
+    background-color: transparent;
+}
+
+.order{
+    display: flex;
+    justify-content: space-between;
+}
+.infos input{
+    width: 250px;
+    height:35px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: grey;
+    padding-left: 10px;
+    font-size: 17px;
+}
+.head input{
+    padding-left: 20px;
+    width: 110px;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    height: 20px;
+
+}
+.infos{
+    display: flex;
+}
+.infos h3{
+    font-size: 15px;
+}
+.left, .right{
+    width: 50%;
+}
+.details{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.receipt{
+    display: flex;
+    justify-content: center;
+    
+}
+.records p{
+    font-weight: normal;
+}
+#header{
+    text-align: center;
+}
+.records{
+    
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.records h4{
+    margin-bottom: 4px;
+}
+.center{
+    border-style: dashed;
+    border-color: #1c1c1c;
+    padding: 30px 10px 30px 10px;
+    border-width: 0.5px;
+    border-radius: 20px;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cent{
+    display: none;
+}
+#Quantity, .head select{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.down select{
+    width: 260px;
+                            height:35px;
+                            margin-bottom: 8px;
+                            border-radius: 8px;
+                            border-style: solid;
+                            border-width: 0.3px;
+                            border-color: grey;
+                            padding-left: 10px;
+                            font-size: 17px;
+}
+@media screen and (max-width:650px) {
+
+  
+
+    #Course, #Year, #Section{
+        width: 99%;
+    }
+    .checkOut{
+        display: grid;
+    }
+    .infos{
+        display: grid;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .details{
+        display: grid;
+    }
+    .button{
+       justify-content: center;
+    }
+    .left input, .right input{
+        width: 100%;
+    }
+    .right{
+        padding: 0;
+    }
+     .head select{
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 7px;
+        border-color: black;
+    }
+
+    #Quantity{
+        width: 80px;
+       
+    }
+
+    .button button{
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3/dist/JsBarcode.all.min.js"></script>
+
+    <link rel="stylesheet" href="finalstyle.css">
+</head>
+<body>
+ 
+    <div class="top">
+        <div class="container">
+          <div class="image">
+      
+          </div>
+          <div class="text">
+            <h1>SUPPREME STUDENT GOVERNMENT <br>
+            </h1>
+            <h5>CEBU TECHNOLOGICALUNIVERSITY-DAANBANTAYAN CAMPUS</h5>
+            
+          </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="checkOut">
+        <div class="left">
+            <div class="image">
+                <img src="3.png" alt="">
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="infos">
+                <div class="left">
+
+                    <h2>Student Details </h2> <br> 
+                    <label for=""><h3>Name: <br>
+                        <input type="text" name="" id="Name" required>
+    
+                    </h3></label>
+
+                    <div class="down">
+                        <label for=""><h3>Course: </h3>
+                            <select name="" id="Course" 
+                         >
+                                <option value="BSED-MATH">BSED-MATH</option>
+                                <option value="BTLED">BTLED</option>
+                                <option value="BEED">BEED</option>
+                                <option value="BSIE">BSIE</option>
+                                <option value="BSIT">BSIT</option>
+                                <option value="BSFI">BSFI</option>
+                                <option value="BSHM">BSHM</option>
+                                <option value="BIT-AUTO">BIT-AUTO</option>
+                                <option value="BIT-ELEC">BIT-ELEC</option>
+                                <option value="BIT-COMTECH">BIT-COMTECH</option>
+                            </select>
+                        </label>
+                        <label for=""><h3>Year:</h3>
+                            <select name="" id="Year"
+                        >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </label>
+    
+                        <label for=""><h3>Section:</h3> 
+                            <select name="" id="Section"  >
+                            
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                            </select>
+                        </label>
+                    </div>
+                    
+    
+                    <label for=""><h3>Student ID: <br>
+                        <input type="text" name="" id="StudentID" required>
+                    </h3></label>
+                </div>
+
+                <div class="right">
+
+                    <h2>Contact</h2> <br>
+                    <label for=""><h3> Phone Number: <br>
+                        <input type="text" name="" id="PhoneNumber" required>
+                    </h3></label>
+    
+                    <label for=""><h3>Email: <br>
+                        <input type="email" name="" id="Email" required>
+                    </h3></label>
+
+                    <h2>Merhcandise Details</h2> <br>
+
+                    <div class="details">
+                        
+                        
+
+                        <div class="head">
+                            
+                            <h3>Select Color: </h3>
+        
+                                <select id="Color" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            
+                        </div>
+
+                        <div class="head" >
+                            <h3>Select Size:  </h3>
+                                
+                                <select name="" id="Size" required>
+                                    <option value="X-SMALL">X-SMALL</option>
+                                    <option value="SMALL">SMALL</option>
+                                    <option value="MEDIUM">MEDIUM</option>
+                                    <option value="LARGE">LARGE</option>
+                                    <option value="X-LARGE">X-LARGE</option>
+                                </select>
+                        </div>
+
+                        <div class="head">
+                            <h3>Quantity <br>
+
+                                <input type="number" name="" id="Quantity" value="1" required>
+                            </h3>
+                        </div>
+                      </div>
+                      <br>
+                      <i><b><p id="warn" style="color: red; text-align: center; font-size: 15px;"></p></b></i>
+
+                      
+                </div>
+
+                
+            </div>
+
+            <div class="order">
+              
+
+               <br>
+            </div>
+            <hr>
+            
+                <br>
+            
+            <div class="button">
+                
+                <button id="" onclick="Clicked()">PLACE  ORDER</button>
+                
+            </div>
+            <br> 
+            <br>
+            <div class="receipt">
+                <div class="center" id="cent">
+                    <h3 id="header">PLEASE PRESENT THIS TO SSG OFFICE <br> UPON CLAIMING</h3> <br>
+                     <hr>
+                     <div class="records"> <br>
+
+                    
+                        <div class="track" style="display: grid; justify-content: center;">
+                            <div class="svg">
+                                <h3 id="tr"></h3>
+                                <p id="tracknum" style="text-align: center; display: none;"></p> <br>
+                                <svg id="barcode"></svg>
+                            </div>
+                            
+                          
+                        </div>
+                    <h4 id="disName"></h4>
+                    <h4 id="disCourse"></h4>
+                    <h4 id="disYear"> </h4>
+                    <h4 id="disSection"></h4>
+                    <h4 id="disID"></h4>
+                    <h4 id="disPhone"> </h4>
+                    <h4 id="disEmail"></h4>
+                    <h4 id="disColor"></h4>
+                    <h4 id="disSize"></h4>
+                    <h4 id="disQuan"></h4>
+                    <br>
+                    <hr>
+                    
+                    <div class="total">
+                        <div class="tot">
+                            <h4 id="total"></h4>
+
+                        </div>
+                     </div>
+                     <br> <br>
+                     <i><p id="note" style="text-align: center; color: red;  font-size: 14px; font-weight: bold;"></p></i>
+                 </div>
+                 
+              
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script>
+        function Clicked(){
+
+//ENTER KEY PRESSED
+var inputs = document.querySelectorAll('input[type="text"]');
+inputs.forEach(function(input, index) {
+  input.addEventListener('keypress', function(event) {
+      // Check if Enter key is pressed
+      if (event.key === 'Enter') {
+          // Focus on the next input field
+          var nextIndex = index + 1;
+          if (nextIndex < inputs.length) {
+              inputs[nextIndex].focus();
+          }
+      }
+  });
+});
+
+var name = document.getElementById('Name').value;
+var course = document.getElementById('Course').value;
+var year = document.getElementById('Year').value;
+var section = document.getElementById('Section').value;
+var id = document.getElementById('StudentID').value;
+var phone = document.getElementById('PhoneNumber').value;
+var email = document.getElementById('Email').value;
+var color = document.getElementById('Color').value;
+var size = document.getElementById('Size').value;
+var quan = parseInt(document.getElementById('Quantity').value);
+var randomNumber = Math.floor(Math.random() * 100000000);
+var price = 220;
+
+// var div = document.getElementById('center');
+// if (div.style.display === 'none') {
+//     div.style.display = 'block'; // Change to 'block' to show div
+// } 
+
+if (name === "" || course === "" || year === "" || section === "" || id === "" || phone === "" || email === "") {
+  document.getElementById('warn').innerHTML = "*All fields must be filled!";
+} else {
+  document.getElementById('tracknum').innerHTML = randomNumber;
+  document.getElementById('disName').innerHTML = "Name: " + name;
+  document.getElementById('disCourse').innerHTML = "Course: " + course;
+  document.getElementById('disYear').innerHTML = "Year: " + year;
+  document.getElementById('disSection').innerHTML = "Section: " + section;
+  document.getElementById('disID').innerHTML = "Student ID: " + id;
+  document.getElementById('disPhone').innerHTML = "Phone Number: " + phone;
+  document.getElementById('disEmail').innerHTML = "Email: " + email;
+  document.getElementById('disColor').innerHTML = "Color: " + color;
+  document.getElementById('disSize').innerHTML = "Size: " + size;
+  document.getElementById('disQuan').innerHTML = "Quantity: " + quan;
+  document.getElementById('tr').innerHTML="TRACKING  NUMBER";
+
+  document.getElementById('note').innerHTML="*1(ONE) ITEM PER TRANSACTION";
+
+  // Calculate total price
+  var totalPrice = price * quan;
+  document.getElementById('total').innerHTML = "TOTAL:₱ " + totalPrice;
+
+  //BARCODE
+  var textToBarcode = randomNumber;
+  JsBarcode("#barcode", textToBarcode);
+}
+
+var div = document.getElementById('cent');
+if (div.style.display === 'none') {
+  div.style.display = 'block'; // Change to 'block' to show div
+} else {
+  div.style.display = 'none'; // Hide the div
+}
+
+
+var inputs = document.querySelectorAll('input[type="text"]');
+
+fetch('receipt.html')
+.then(response => response.text())
+.then(data => {
+  // Insert the content into the receiptContainer div
+  document.getElementById('right-div').innerHTML = data;
+})
+.catch(error => console.error('Error:', error));
+      
+
+}
+
+    </script>
+</body>
+</html>
