@@ -8,7 +8,7 @@ function checkStudentId() {
     // Check if the inputted ID exists in the list
     if (existingIds.includes(inputId)) {
       
-      window.location.href = 'file:///C:/Users/dennt/Documents/ssg-system/home.html';
+      window.location.href = 'https://denntorrevillas.github.io/ssgmerch/home.html';
     } 
     else if(document.getElementById('studentID').value===''){
       document.getElementById('warning').innerHTML="*FIELD IS EMPTY";
